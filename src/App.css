@@ -1,0 +1,10 @@
+.counter {
+  display: flex;
+}
+.container.light {
+  background-color: aliceblue;
+}
+
+.container.dark {
+  background-color: black;
+}
