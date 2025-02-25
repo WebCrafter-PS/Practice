@@ -12,6 +12,8 @@ import Tooltip from "./components/Tooltip"
 import Theme from "./components/Theme";
 import { useState, useContext } from "react";
 import { ThemeContext } from "./utility/context";
+import OTP from "./components/OTPgenerator";
+import PasswordGenerator from "./components/PasswordGen";
 
 function App() {
   const data = useContext(ThemeContext);
@@ -20,7 +22,7 @@ function App() {
   
   return (
     <>
-      <div>
+      <div className="app">
         <Todo />
         <Counter/>
         <Toggle/>
@@ -33,6 +35,8 @@ function App() {
         <ThemeContext.Provider value={{ theme: mode,setMode }}>
           <Theme />
         </ThemeContext.Provider>
+        <OTP/>
+        <PasswordGenerator/>
       </div>
     </>
   );

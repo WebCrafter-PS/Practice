@@ -1,10 +1,20 @@
+.app{
+  margin: 20px;
+}
 .counter {
   display: flex;
 }
-.container.light {
+.container{
+  margin: 20px;
+}
+.container.dark {
   background-color: aliceblue;
 }
 
-.container.dark {
+.container.light {
   background-color: black;
+}
+
+.otp { 
+  margin: 20px;
 }
