@@ -15,6 +15,7 @@ import { ThemeContext } from "./utility/context";
 import OTP from "./components/OTPgenerator";
 import PasswordGenerator from "./components/PasswordGen";
 import StarRating from "./components/StarRating";
+import ApiCall from "./components/Api";
 
 function App() {
   const data = useContext(ThemeContext);
@@ -39,6 +40,7 @@ function App() {
         <OTP />
         <PasswordGenerator />
         <StarRating />
+        <ApiCall/>
       </div>
     </>
   );
