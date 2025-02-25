@@ -18,3 +18,14 @@
 .otp { 
   margin: 20px;
 }
+
+/* star rating */
+.star .empty {
+ color: rgb(173, 160, 160);
+font-size: 50px;
+}
+
+.star .fill {
+  color: orange;
+ font-size: 50px;
+ }
