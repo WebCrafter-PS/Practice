@@ -1,10 +1,10 @@
-.app{
+.app {
   margin: 20px;
 }
 .counter {
   display: flex;
 }
-.container{
+.container {
   margin: 20px;
 }
 .container.dark {
@@ -15,17 +15,31 @@
   background-color: black;
 }
 
-.otp { 
+.otp {
   margin: 20px;
 }
 
 /* star rating */
 .star .empty {
- color: rgb(173, 160, 160);
-font-size: 50px;
+  color: rgb(173, 160, 160);
+  font-size: 50px;
 }
 
 .star .fill {
   color: orange;
- font-size: 50px;
- }
+  font-size: 50px;
+}
+
+.progress-container {
+  width: auto;
+  height: 30px;
+  background-color: rgb(204, 196, 196);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.progress {
+  border-radius: 5px;
+  width: 25%;
+  height: 30px;
+  background-color: rgb(244, 225, 15);
+}

@@ -16,6 +16,7 @@ import OTP from "./components/OTPgenerator";
 import PasswordGenerator from "./components/PasswordGen";
 import StarRating from "./components/StarRating";
 import ApiCall from "./components/Api";
+import ProgressBar from "./components/ProgressBar";
 
 function App() {
   const data = useContext(ThemeContext);
@@ -40,7 +41,8 @@ function App() {
         <OTP />
         <PasswordGenerator />
         <StarRating />
-        <ApiCall/>
+        {/* <ApiCall/> */}
+        <ProgressBar/>
       </div>
     </>
   );
