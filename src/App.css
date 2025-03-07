@@ -43,3 +43,23 @@
   height: 30px;
   background-color: rgb(244, 225, 15);
 }
+.search-results {
+  width: 150px;
+}
+.memo {
+  border: 1px solid black;
+  margin: 10px;
+  width: 500px;
+  height: 200px;
+  
+}
+.theme{
+  margin: 5px;
+}
+.theme.light {
+  background-color: gainsboro;
+}
+.theme .dark {
+  background-color: black;
+  color: white;
+}
