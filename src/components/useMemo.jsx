@@ -32,7 +32,8 @@ function findNthPrime(n) {
 const Memoization = () => {
   const [number, setNumber] = useState(0);
   const [theme, setTheme] = useState("dark");
-  console.log("component rendered..");
+  // console.log("component rendered..");
+
 
   const result = useMemo(() => findNthPrime(number), [number]);
 

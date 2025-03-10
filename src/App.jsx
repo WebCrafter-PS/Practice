@@ -19,6 +19,7 @@ import StarRating from "./components/StarRating";
 import ProgressBar from "./components/ProgressBar";
 import SearchDebounce from "./components/SearchDebounce";
 import Memoization from "./components/useMemo";
+import Callback from "./components/useCallback";
 
 function App() {
   const data = useContext(ThemeContext);
@@ -47,6 +48,7 @@ function App() {
         <ProgressBar/>
         <SearchDebounce/>
         <Memoization/>
+        <Callback/>
       </div>
     </>
   );
