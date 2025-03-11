@@ -20,6 +20,7 @@ import ProgressBar from "./components/ProgressBar";
 import SearchDebounce from "./components/SearchDebounce";
 import Memoization from "./components/useMemo";
 import Callback from "./components/useCallback";
+import RefDOM from "./components/useRef";
 
 function App() {
   const data = useContext(ThemeContext);
@@ -49,6 +50,7 @@ function App() {
         <SearchDebounce/>
         <Memoization/>
         <Callback/>
+        <RefDOM/>
       </div>
     </>
   );
