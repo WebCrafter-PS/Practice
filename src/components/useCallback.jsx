@@ -1,5 +1,4 @@
 /* eslint-disable react/display-name */
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 
 //cache the function definition b/w re-renders

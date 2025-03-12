@@ -1,12 +1,15 @@
 import { useState, useRef } from "react";
 
 //reference a value that's not needed for re-rendering
-//u don't want to render the component but need a value
+//even if any state updates and component re-renders, ref.current value doesn't change
+
+//do :event handler & useEffects
+//donot: read during rendering
 const RefDOM = () => {
   const [val, setVal] = useState(0);
 
   const ref = useRef(0);
-  //ref = {current : 0}
+  //ref = {current : 0}  - immutable
   let local = 26;
 
   return (
@@ -14,7 +17,7 @@ const RefDOM = () => {
       <h1>useRef</h1>
       <button
         onClick={() => {
-          local = local + 1;
+          local += 1;
           console.log(local); //local gets refreshed whenever the val state changes
         }}
       >
