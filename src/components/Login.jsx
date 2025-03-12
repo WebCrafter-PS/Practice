@@ -1,12 +1,11 @@
-//1.email & password
+//1. client-validation email & password using REGEX
+//2. phone number inline 
 
 import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // console.log(userDetails);
 
   function emailValidate(email) {
     let pattern = /[A-z0-9]@[A-Z].[A-Z]/gi;
@@ -15,41 +14,18 @@ const Login = () => {
   }
   function passwordValidate() {
     //8 chars - CAPS, small, number, special char (atleast one) - Ab1@5678
-    // let pattern = /[A-Z]+[a-z]+[0-9]+[@#$%^&*()!]*.{8,}/g;
-    // const res = pattern.test(password);
-    return true; //true/false
+    let pattern = /[A-Z]+[a-z]+[0-9]+[@#$%^&*()!]*.{8,}/g;
+    const res = pattern.test(password);
+    return res; //true/false
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (emailValidate(email) && passwordValidate(password)) {
       console.log("email & password is valid", email);
     } else {
       console.log("user not valid", email, password);
-    }
-
-    //we can call an api and send the data to the server after client-side validation
-    const url = "https://dummyjson.com/auth/login";
-    const requestOptions = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
-    };
-
-    try {
-      const request = await fetch(url, requestOptions);
-      const response = await request.json();
-      //  console.log(response); will get 1 userdata based on u,p
-      console.log(response.firstName + response.lastName);
-    } 
-    catch (error) {
-      console.log(error);
     }
   };
 
