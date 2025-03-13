@@ -1,8 +1,8 @@
 import "./App.css";
 // import LocalStorage from "./components/LocalStorage";
-import Login from "./components/Login";
+// import Login from "./components/Login";
 
-// import Todo from "./components/Todo";
+import Todo from "./components/Todo";
 // import Counter from "./components/Counter";
 // import Toggle from "./components/Toggle";
 // import Timer from "./components/Timer";
@@ -32,8 +32,8 @@ function App() {
   return (
     <>
       <div className="app">
-        {/* <Todo />
-        <Counter />
+        <Todo />
+       {/*  <Counter />
         <Toggle />
         <Timer />
         <Tooltip />
@@ -51,10 +51,11 @@ function App() {
         <ProgressBar/>
         <SearchDebounce/>
         <Memoization/>
-        <Callback/>
+       
         <RefDOM/> 
-        <LocalStorage />*/}
+        <LocalStorage />
         <Login/>
+         <Callback/>*/}
       </div>
     </>
   );

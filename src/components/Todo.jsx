@@ -4,29 +4,40 @@
 //checkbox
 //delete -> if checked - get the index - update the array
 //edit -> on double click -> get that todo in input(DOM manipulation) - edit it - update array
-import { useState } from "react";
+import { useState, useRef } from "react";
 const Todo = () => {
   const [input, setInput] = useState("");
   const [todo, setTodo] = useState([]);
+  const editRef = useRef(); //editRef = {current:null}
+  const editIndex = useRef(null);
 
   const handlerEnter = (e) => {
     if (e.key === "Enter") {
-      setTodo([...todo, input]);
+      if (editIndex.current !== null) {
+        //replace the array element
+        todo.splice(editIndex.current, 1, input);
+
+        editIndex.current = null;
+      } else {
+        setTodo([...todo, input]);
+      }
       setInput("");
     }
   };
 
-  const handlerCheck = (deleteIndex, e) => {
+  const handlerCheck = (deleteIdIndex, e) => {
     if (e.target.checked === true) {
-      const result = todo.filter((item, index) => index !== deleteIndex);
+      const result = todo.filter(
+        (_, index) => index !== parseInt(deleteIdIndex)
+      );
       setTodo(result);
     }
   };
 
-  const handlerEdit = (editIndex) => {
-    
-    console.log(editIndex);
-    
+  const handlerEdit = (e, eIndex) => {
+    //show Editable value in Input
+    editRef.current.value = e.target.textContent;
+    editIndex.current = eIndex;
   };
 
   return (
@@ -38,21 +49,21 @@ const Todo = () => {
         onChange={(e) => setInput(e.target.value)}
         value={input}
         onKeyDown={handlerEnter}
+        ref={editRef}
       ></input>
 
       <div className="list">
         {todo.map((item, index) => (
-          <div key={index}>
+          <div key={index + "id"}>
             <input
               type="checkbox"
               name="todo"
               value={item}
               onClick={(e) => {
-                handlerCheck(index, e);
+                handlerCheck(index + "id", e);
               }}
-              
             />
-          <div onDoubleClick={(e) => handlerEdit(index, e)}>{item}</div>  
+            <div onDoubleClick={(e) => handlerEdit(e, index)}>{item}</div>
           </div>
         ))}
       </div>

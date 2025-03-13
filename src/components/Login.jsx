@@ -1,5 +1,5 @@
 //1. client-validation email & password using REGEX
-//2. phone number inline 
+//2. phone number inline
 
 import { useState } from "react";
 
@@ -35,10 +35,6 @@ const Login = () => {
         <div>
           <label>Email: </label>
           <input type="email" onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label>Username: </label>
-          <input type="text" onChange={(e) => setUsername(e.target.value)} />
         </div>
         <div>
           <label>Password: </label>

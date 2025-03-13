@@ -3,8 +3,8 @@ import { useState, useRef } from "react";
 //reference a value that's not needed for re-rendering
 //even if any state updates and component re-renders, ref.current value doesn't change
 
-//do :event handler & useEffects
-//donot: read during rendering
+//do :read/write inside event handler & useEffects
+//donot: read/write during rendering
 const RefDOM = () => {
   const [val, setVal] = useState(0);
 
