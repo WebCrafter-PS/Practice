@@ -1,8 +1,7 @@
 import "./App.css";
 // import LocalStorage from "./components/LocalStorage";
 // import Login from "./components/Login";
-
-import Todo from "./components/Todo";
+// import Todo from "./components/Todo";
 // import Counter from "./components/Counter";
 // import Toggle from "./components/Toggle";
 // import Timer from "./components/Timer";
@@ -23,6 +22,7 @@ import Todo from "./components/Todo";
 // import Memoization from "./components/useMemo";
 // import Callback from "./components/useCallback";
 // import RefDOM from "./components/useRef";
+import Typewriter from "./components/Typewriter";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -32,8 +32,8 @@ function App() {
   return (
     <>
       <div className="app">
-        <Todo />
-       {/*  <Counter />
+        {/* <Todo />
+        <Counter />
         <Toggle />
         <Timer />
         <Tooltip />
@@ -51,11 +51,11 @@ function App() {
         <ProgressBar/>
         <SearchDebounce/>
         <Memoization/>
-       
         <RefDOM/> 
         <LocalStorage />
         <Login/>
          <Callback/>*/}
+         <Typewriter/>
       </div>
     </>
   );
