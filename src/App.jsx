@@ -22,7 +22,8 @@ import "./App.css";
 // import Memoization from "./components/useMemo";
 // import Callback from "./components/useCallback";
 // import RefDOM from "./components/useRef";
-import Typewriter from "./components/Typewriter";
+// import Typewriter from "./components/Typewriter";
+import DragDrop from "./components/Drag&Drop";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -55,7 +56,8 @@ function App() {
         <LocalStorage />
         <Login/>
          <Callback/>*/}
-         <Typewriter/>
+         {/* <Typewriter/> */}
+         <DragDrop/>
       </div>
     </>
   );

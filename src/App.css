@@ -75,3 +75,10 @@ form button{
   width : 100px;
   margin: 5px;
 }
+
+.dropbox{
+  background-color: rgb(236, 220, 223);
+  border: 1px solid black;
+  width:150px;
+  height:100px;
+}
