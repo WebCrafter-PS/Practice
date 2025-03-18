@@ -16,14 +16,15 @@ import "./App.css";
 // import OTP from "./components/OTPgenerator";
 // import PasswordGenerator from "./components/PasswordGen";
 // import StarRating from "./components/StarRating";
-// // import ApiCall from "./components/Api";
+// import ApiCall from "./components/Api";
 // import ProgressBar from "./components/ProgressBar";
 // import SearchDebounce from "./components/SearchDebounce";
 // import Memoization from "./components/useMemo";
 // import Callback from "./components/useCallback";
 // import RefDOM from "./components/useRef";
 // import Typewriter from "./components/Typewriter";
-import DragDrop from "./components/Drag&Drop";
+// import DragDrop from "./components/Drag&Drop";
+import FormLogin from "./components/Forms";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -55,9 +56,10 @@ function App() {
         <RefDOM/> 
         <LocalStorage />
         <Login/>
-         <Callback/>*/}
-         {/* <Typewriter/> */}
-         <DragDrop/>
+         <Callback/>
+          <Typewriter/> 
+         <DragDrop/>*/}
+        <FormLogin />
       </div>
     </>
   );

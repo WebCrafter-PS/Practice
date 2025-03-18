@@ -51,9 +51,8 @@
   margin: 10px;
   width: 500px;
   height: 200px;
-  
 }
-.theme{
+.theme {
   margin: 5px;
 }
 .theme.light {
@@ -68,17 +67,43 @@ form {
   display: flex;
   flex-direction: column;
 }
-form div{
+form div {
   margin: 3px;
 }
-form button{
-  width : 100px;
+form button {
+  width: 100px;
   margin: 5px;
 }
 
-.dropbox{
+.dropbox {
   background-color: rgb(236, 220, 223);
   border: 1px solid black;
-  width:150px;
-  height:100px;
+  width: 150px;
+  height: 100px;
+}
+
+.formLogin input {
+  width: 200px;
+  border: 1px solid black;
+}
+
+.formLogin label {
+  margin: 5px;
+}
+.formLogin1 label {
+  margin: 5px;
+}
+.formLogin2 label {
+  margin: 5px;
+}
+
+.formLogin2 input {
+  width: 200px;
+}
+.formLogin2.edu input {
+  width: 20px;
+}
+
+.alldata ul li {
+  list-style-type: none;
 }
