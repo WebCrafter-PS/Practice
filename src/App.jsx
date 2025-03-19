@@ -24,8 +24,9 @@ import "./App.css";
 // import RefDOM from "./components/useRef";
 // import Typewriter from "./components/Typewriter";
 // import DragDrop from "./components/Drag&Drop";
-import FormLogin from "./components/Forms";
+// import FormLogin from "./components/Forms";
 // import Tabs from "./components/TabbedInterface";
+import CopyToClipboard from "./components/Clipboard";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -60,8 +61,9 @@ function App() {
          <Callback/>
           <Typewriter/> 
               <Tabs />
-         <DragDrop/>*/}
-        <FormLogin /> 
+         <DragDrop/>
+        <FormLogin /> */}
+        <CopyToClipboard/>
     
       </div>
     </>
