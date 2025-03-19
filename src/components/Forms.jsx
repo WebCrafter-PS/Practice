@@ -108,29 +108,56 @@ function PersonalInfo({ info }) {
 
 //3.
 const EducationInfo = ({ formdata, name }) => {
-  const { age, dob, gender, dropdown } = formdata;
+  let age, dob, gender, dropdown; //if would create a block scope for variables so
+  const [eduData, setEduData] = useState([]);
+  console.log(eduData);
+
+  //destructure array of objects [{},{}]
+  if (formdata.length >= 1) {
+    const lastItem = formdata[formdata.length - 1]; //only need lastly added object
+    ({ age, dob, gender, dropdown } = lastItem);
+  }
+
+  const submit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    // console.log(data.getAll("checkbox"));
+
+    for (let [key, value] of data.entries()) {
+      setEduData((prevData) => [...prevData, { [key]: value }]);
+    }
+  };
   return (
     <div>
       <h1>Education Details</h1>
-      <form className="formLogin2">
+      <form className="formLogin2" onSubmit={submit}>
         <label> Username:</label>
         <input disabled value={name} name="username" />
         <label className="edu">Education: </label>
         <label>
-          10<sup>th</sup> <input type="checkbox" name="checkbox" />
+          10<sup>th</sup>{" "}
+          <input type="checkbox" name="checkbox" value={"10th"} />
         </label>
         <label>
-          12<sup>th</sup> <input type="checkbox" name="checkbox" />
+          12<sup>th</sup>{" "}
+          <input type="checkbox" name="checkbox" value={"12th"} />
         </label>
         <label>
-          BE <input type="checkbox" name="checkbox" />
+          BE <input type="checkbox" name="checkbox" value={"BE"} />
         </label>
         <label>
-          PHD <input type="checkbox" name="checkbox" />
+          PHD <input type="checkbox" name="checkbox" value={"PHD"} />
         </label>
+
         <label>Upload file:</label>
-        <input type="file" name="filename"/>
-        <label>Reset:  <input type="reset"/>  Submit: <input type="submit"/></label>
+        <input type="file" name="filename" />
+
+        <label>Time: </label>
+        <input type="time" name="time" />
+
+        <label>
+          Reset: <input type="reset" /> Submit: <input type="submit" />
+        </label>
       </form>
       <div className="alldata">
         <ul>

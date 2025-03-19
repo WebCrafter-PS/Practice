@@ -103,7 +103,25 @@ form button {
 .formLogin2.edu input {
   width: 20px;
 }
-
+.alldata {
+  border: 1px solid black;
+  margin-top: 20px;
+  width: 200px;
+  text-align: center;
+}
 .alldata ul li {
   list-style-type: none;
+ 
+}
+.tabs{
+  border: 1px solid black;
+  width : 50%
+  /* height: 250px; */
+}
+.tabHead{
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }

@@ -25,6 +25,7 @@ import "./App.css";
 // import Typewriter from "./components/Typewriter";
 // import DragDrop from "./components/Drag&Drop";
 import FormLogin from "./components/Forms";
+// import Tabs from "./components/TabbedInterface";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -58,8 +59,10 @@ function App() {
         <Login/>
          <Callback/>
           <Typewriter/> 
+              <Tabs />
          <DragDrop/>*/}
-        <FormLogin />
+        <FormLogin /> 
+    
       </div>
     </>
   );
