@@ -26,7 +26,8 @@ import "./App.css";
 // import DragDrop from "./components/Drag&Drop";
 // import FormLogin from "./components/Forms";
 // import Tabs from "./components/TabbedInterface";
-import CopyToClipboard from "./components/Clipboard";
+// import CopyToClipboard from "./components/Clipboard";
+import ParentProgress from "./components/ProgressBar";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -62,9 +63,10 @@ function App() {
           <Typewriter/> 
               <Tabs />
          <DragDrop/>
-        <FormLogin /> */}
-        <CopyToClipboard/>
-    
+        <FormLogin /> 
+        <CopyToClipboard/>*/}
+
+        <ParentProgress />
       </div>
     </>
   );

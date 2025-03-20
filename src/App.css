@@ -30,18 +30,17 @@
   font-size: 50px;
 }
 
-.progress-container {
-  width: auto;
-  height: 30px;
-  background-color: rgb(204, 196, 196);
-  border: 1px solid black;
+.progressBar{
+  width: 100%;
+  background-color: lightgrey;
+  margin-top: 20px;
   border-radius: 5px;
 }
-.progress {
+
+.progressHolder{
+  background-color: lightcoral;
   border-radius: 5px;
-  width: 25%;
-  height: 30px;
-  background-color: rgb(244, 225, 15);
+  padding: 10px;
 }
 .search-results {
   width: 150px;
