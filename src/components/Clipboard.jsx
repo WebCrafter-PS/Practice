@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 //copy to Clipboard
 import { useState } from "react";
 const CopyToClipboard = ({ str = "test-input" }) => {

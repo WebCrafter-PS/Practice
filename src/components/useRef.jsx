@@ -9,7 +9,7 @@ const RefDOM = () => {
   const [val, setVal] = useState(0);
 
   const ref = useRef(0);
-  //ref = {current : 0}  - immutable
+  //ref = {current : 0}  - mutable
   let local = 26;
 
   return (
@@ -33,6 +33,7 @@ const RefDOM = () => {
         useRef
       </button>
       <p>{local}</p>
+      {/* won't be visible during rendering - use log instead */}
       <p>{val}</p>
       <p>{ref.current}</p>
       {/* don't use ref during rendering */}
