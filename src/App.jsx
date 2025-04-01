@@ -27,7 +27,8 @@ import "./App.css";
 // import FormLogin from "./components/Forms";
 // import Tabs from "./components/TabbedInterface";
 // import CopyToClipboard from "./components/Clipboard";
-import ParentProgress from "./components/ProgressBar";
+// import ParentProgress from "./components/ProgressBar";
+import Pagination from "./components/Pagination";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -64,9 +65,9 @@ function App() {
               <Tabs />
          <DragDrop/>
         <FormLogin /> 
-        <CopyToClipboard/>*/}
-
-        <ParentProgress />
+        <CopyToClipboard/>
+        <ParentProgress />*/}
+        <Pagination/>
       </div>
     </>
   );
