@@ -30,14 +30,14 @@
   font-size: 50px;
 }
 
-.progressBar{
+.progressBar {
   width: 100%;
   background-color: lightgrey;
   margin-top: 20px;
   border-radius: 5px;
 }
 
-.progressHolder{
+.progressHolder {
   background-color: lightcoral;
   border-radius: 5px;
   padding: 10px;
@@ -110,17 +110,39 @@ form button {
 }
 .alldata ul li {
   list-style-type: none;
- 
 }
-.tabs{
+.tabs {
   border: 1px solid black;
-  width : 50%
+  width: 50%;
   /* height: 250px; */
 }
-.tabHead{
+.tabHead {
   border-bottom: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+}
+
+/* pagination */
+.pagination ul li {
+  list-style-type: none;
+}
+.user {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 50px;
+}
+.pagebox{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.pagenum {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(217, 233, 234);
+  margin: 3px;
+  padding: 3px;
+ text-align: center;
 }
