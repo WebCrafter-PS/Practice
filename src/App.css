@@ -146,3 +146,15 @@ form button {
   padding: 3px;
  text-align: center;
 }
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cards img{
+   width: 180px;
+  height: 180px;
+  /* background-color: gray; */
+  margin: 6px;
+}

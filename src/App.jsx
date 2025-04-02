@@ -28,7 +28,8 @@ import "./App.css";
 // import Tabs from "./components/TabbedInterface";
 // import CopyToClipboard from "./components/Clipboard";
 // import ParentProgress from "./components/ProgressBar";
-import Pagination from "./components/Pagination";
+// import Pagination from "./components/Pagination";
+import MemoryGame from "./components/Game";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -66,8 +67,9 @@ function App() {
          <DragDrop/>
         <FormLogin /> 
         <CopyToClipboard/>
-        <ParentProgress />*/}
-        <Pagination/>
+        <ParentProgress />
+        <Pagination/>*/}
+        <MemoryGame />
       </div>
     </>
   );
