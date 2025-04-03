@@ -19,13 +19,25 @@ const images = [
 
 export default function MemoryGame() {
   const [cards, setCards] = useState([]);
+  const [flipped, setFlipped] = useState(false);
+
   useEffect(() => {
-    let card = images.concat(images);   
+    let card = images.concat(images);
+    let len = card.length - 1; //5-1=4
+    for (let i = len; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i - 0 + 1) + 0); //max-min+1
+      [card[i], card[j]] = [card[j], card[i]]; //swap array elements [i,j] =[j,i]
+    }
     setCards(card);
   }, []);
 
+  const handleShow = () => {
+    //display img
+    
+  };
+
   return (
-    <div className="cards">
+    <div className="cards" onClick={handleShow}>
       {cards.map((item, index) => (
         <img src={item} key={index} />
       ))}
