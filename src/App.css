@@ -133,7 +133,7 @@ form button {
   margin: 10px;
   padding: 50px;
 }
-.pagebox{
+.pagebox {
   display: flex;
   flex-direction: row;
   cursor: pointer;
@@ -144,17 +144,22 @@ form button {
   background-color: rgb(217, 233, 234);
   margin: 3px;
   padding: 3px;
- text-align: center;
+  text-align: center;
 }
-.cards{
+.cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
-.cards img{
-   width: 180px;
-  height: 180px;
-  background-color: gray;
+.card {
+  background-color: rgb(210, 206, 206);
+  border: 1px solid black;
   margin: 6px;
+  width: 180px;
+  height: 180px;
+}
+
+.cards img {
+  width: 180px;
+  height: 180px;
 }

@@ -14,15 +14,17 @@ const images = [
 
 //multiply images - concat
 //random shuffle - fisher-yates algoritm
-//image flipped - gray  - state
 //onClick - img show
+
+//till - 1 pair matched images show
 
 export default function MemoryGame() {
   const [cards, setCards] = useState([]);
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, setFlipped] = useState([]);
+  const [matched, setMatched] = useState([]);
 
   useEffect(() => {
-    let card = images.concat(images);
+    let card = images.concat(images); //12 cards
     let len = card.length - 1; //5-1=4
     for (let i = len; i > 0; i--) {
       let j = Math.floor(Math.random() * (i - 0 + 1) + 0); //max-min+1
@@ -31,15 +33,39 @@ export default function MemoryGame() {
     setCards(card);
   }, []);
 
-  const handleShow = () => {
-    //display img
-    
-  };
+  //if array length is 2 - check if 2 images r same, Y- show, N- flip images back
+  useEffect(() => {
+    if (flipped.length === 2) {
+      if (matched[0] === matched[1]) {
+        console.log("yes");
+      } else {
+        setTimeout(() => {
+          setFlipped([]);
+          setMatched([]);
+        }, 1000); //flip with delay
+      }
+    }
+  }, [flipped, matched]);
 
+  const handleShow = (index, item) => {
+    //display img based on click
+    cards.forEach((_, i) => {
+      if (i === index) {
+        setFlipped([...flipped, index]);
+        setMatched([...matched, item]);
+      }
+    });
+  };
   return (
-    <div className="cards" onClick={handleShow}>
+    <div className="cards">
       {cards.map((item, index) => (
-        <img src={item} key={index} />
+        <div
+          className="card"
+          key={index}
+          onClick={() => handleShow(index, item)}
+        >
+          {flipped.includes(index) && <img src={item} />}
+        </div>
       ))}
     </div>
   );
