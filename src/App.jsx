@@ -30,6 +30,7 @@ import "./App.css";
 // import ParentProgress from "./components/ProgressBar";
 // import Pagination from "./components/Pagination";
 import MemoryGame from "./components/Game";
+import Pomodoro from "./components/Pomodoro";
 
 function App() {
   // const data = useContext(ThemeContext);
@@ -69,7 +70,8 @@ function App() {
         <CopyToClipboard/>
         <ParentProgress />
         <Pagination/>*/}
-        <MemoryGame />
+        {/* <MemoryGame /> */}
+        <Pomodoro/>
       </div>
     </>
   );
